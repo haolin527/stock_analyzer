@@ -1,0 +1,32 @@
+# ── 密钥（绝对不能提交！）──
+.env
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# ── 缓存与临时文件 ──
+.cache/
+*.log
+logs/
+
+# ── 虚拟环境 ──
+venv/
+.venv/
+env/
+
+# ── IDE ──
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── 系统文件 ──
+.DS_Store
+Thumbs.db
+
+# ── BMad 输出（可选提交，看你需求）──
+# _bmad-output/

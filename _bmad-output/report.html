@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📈 股市早报 | 2026-06-03 (周三)</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background: #f5f7fa; color: #1a1a2e; line-height: 1.6;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+.header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white; padding: 32px 24px; border-radius: 16px; margin-bottom: 20px;
+    text-align: center;
+}
+.header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+.header .date { font-size: 14px; opacity: 0.8; }
+.card {
+    background: white; border-radius: 12px; padding: 24px; margin-bottom: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.card h2 { font-size: 18px; margin-bottom: 16px; padding-bottom: 8px;
+             border-bottom: 2px solid #e8ecf1; }
+.alert {
+    background: #fff3cd; border: 1px solid #ffc107; border-radius: 10px;
+    padding: 14px 20px; margin-bottom: 16px; font-size: 14px; color: #856404;
+}
+/* 概览卡片 */
+.overview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.overview-item {
+    background: white; border-radius: 12px; padding: 18px; text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.overview-item .label { font-size: 12px; color: #8c8c8c; margin-bottom: 6px; }
+.overview-item .value { font-size: 24px; font-weight: 700; }
+.up { color: #cf1322; } .down { color: #389e0d; } .neutral { color: #8c8c8c; }
+/* 表格 */
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { background: #f8f9fb; padding: 10px 12px; text-align: left; font-weight: 600;
+      color: #595959; border-bottom: 2px solid #e8ecf1; }
+td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; }
+tr:hover { background: #f8f9fb; }
+/* 股票分析卡片 */
+.stock-card {
+    border: 1px solid #e8ecf1; border-radius: 10px; padding: 16px;
+    margin-bottom: 10px; transition: box-shadow 0.2s;
+}
+.stock-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.stock-card .stock-header {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+}
+.stock-card .stock-name { font-size: 16px; font-weight: 600; }
+.stock-card .stock-code { font-size: 12px; color: #8c8c8c; margin-left: 8px; }
+.stock-card .stock-meta { font-size: 13px; color: #595959; margin-top: 4px; }
+.action-badge {
+    display: inline-block; padding: 3px 12px; border-radius: 20px;
+    font-size: 13px; font-weight: 600;
+}
+.action-买入 { background: #fff1f0; color: #cf1322; }
+.action-持有 { background: #e6f7ff; color: #096dd9; }
+.action-卖出 { background: #f6ffed; color: #389e0d; }
+.action-观望 { background: #fff7e6; color: #d46b08; }
+.conf-高 { opacity: 1; } .conf-中 { opacity: 0.85; } .conf-低 { opacity: 0.65; }
+.reasoning { font-size: 13px; color: #595959; margin-top: 8px; padding-left: 12px;
+               border-left: 3px solid #e8ecf1; }
+.related-news { font-size: 12px; margin-top: 6px; padding-left: 12px; }
+.related-news .rn-label { color: #8c8c8c; }
+.news-list { list-style: none; }
+.news-list li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+.news-list li:last-child { border-bottom: none; }
+.news-list .news-time { font-size: 12px; color: #8c8c8c; margin-right: 8px; }
+.news-list .news-source { font-size: 12px; color: #bfbfbf; margin-left: 6px; }
+.disclaimer {
+    text-align: center; color: #bfbfbf; font-size: 12px; padding: 20px;
+}
+.footer { text-align: center; padding: 20px; color: #bfbfbf; font-size: 12px; }
+.market-tag {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 11px; font-weight: 600; margin-right: 6px;
+}
+.tag-a { background: #fff1f0; color: #cf1322; }
+.tag-hk { background: #e6f7ff; color: #096dd9; }
+.tag-us { background: #f6ffed; color: #389e0d; }
+@media (max-width: 600px) {
+    .container { padding: 10px; }
+    .header h1 { font-size: 20px; }
+    .overview-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body><div class="container">
+<div class="header"><h1>📈 股市早报 | 2026-06-03 (周三)</h1>
+        <div class="date">盘前智能分析 · 数据驱动决策</div></div>
+<div class="overview-grid">
+        <div class="overview-item"><div class="label">跟踪股票</div>
+        <div class="value neutral">8 只</div></div>
+        <div class="overview-item"><div class="label">上涨 / 下跌</div>
+        <div class="value"><span class="up">0</span> / <span class="down">8</span></div></div>
+        <div class="overview-item"><div class="label">市场情绪</div>
+        <div class="value neutral">偏空</div></div>
+        </div>
+<div class="card"><h2>📊 大盘指数</h2>
+        <table><thead><tr><th>指数</th><th>最新价</th><th>涨跌幅</th><th>涨跌额</th></tr></thead>
+        <tbody><tr><td><span class='market-tag tag-a'>A股</span>上证指数</td><td>4,065.15</td><td class='down'>-0.24%</td><td class='down'>-9.96</td></tr>
+<tr><td><span class='market-tag tag-a'>A股</span>沪深300</td><td>4,918.98</td><td class='up'>+0.09%</td><td class='up'>+4.42</td></tr>
+<tr><td><span class='market-tag tag-a'>A股</span>创业板指</td><td>4,090.95</td><td class='up'>+0.86%</td><td class='up'>+35.08</td></tr>
+<tr><td><span class='market-tag tag-a'>A股</span>科创50</td><td>1,702.06</td><td class='up'>+0.68%</td><td class='up'>+11.50</td></tr>
+<tr><td><span class='market-tag tag-a'>A股</span>上证50</td><td>2,910.94</td><td class='down'>-0.32%</td><td class='down'>-9.33</td></tr>
+</tbody></table></div>
+<div class="card"><h2>💼 自选股明细</h2><h3 style="margin:16px 0 8px;font-size:16px;">A股</h3><div class="stock-card">
+                <div class="stock-header">
+                    <span><span class="stock-name">五 粮 液</span><span class="stock-code">000858.SZ</span></span>
+                    <span style="font-size:18px;font-weight:700;" class="down">82.21</span>
+                </div>
+                <div class="stock-meta">
+                    涨跌 <span class="down">-0.60%</span>
+                    &nbsp;|&nbsp; 成交额 40,602,932
+                    &nbsp;|&nbsp; 最高 82.68 &nbsp;最低 82.18
+                </div>
+                <div class="reasoning"><strong>🎯 持有</strong> <span class="action-badge action-持有 conf-中">中置信度</span><br>技术面：股价自5月29日高点84.89元连续回落，今日跌0.60%，成交量未明显放大，短期处于调整趋势，但未跌破近期起涨点81.49元支撑。消息面：暂无直接利好或利空新闻，白酒板块整体缺乏催化剂，受大盘震荡影响，暂时持有为宜。</div>
+                </div><div class="stock-card">
+                <div class="stock-header">
+                    <span><span class="stock-name">贵州茅台</span><span class="stock-code">600519.SH</span></span>
+                    <span style="font-size:18px;font-weight:700;" class="down">1301.11</span>
+                </div>
+                <div class="stock-meta">
+                    涨跌 <span class="down">-0.47%</span>
+                    &nbsp;|&nbsp; 成交额 105,671,178
+                    &nbsp;|&nbsp; 最高 1304.00 &nbsp;最低 1301.11
+                </div>
+                <div class="reasoning"><strong>🎯 持有</strong> <span class="action-badge action-持有 conf-中">中置信度</span><br>技术面：走势与五粮液类似，在5月29日冲高1326元后连续回调，今日跌0.47%，成交量萎缩，短线空头占优但中期上升结构未被破坏。消息面：无直接关联新闻，高端白酒需求稳定，但短期缺乏事件驱动，宜持有等待方向明朗。</div>
+                </div><div class="stock-card">
+                <div class="stock-header">
+                    <span><span class="stock-name">宁德时代</span><span class="stock-code">300750.SZ</span></span>
+                    <span style="font-size:18px;font-weight:700;" class="down">429.99</span>
+                </div>
+                <div class="stock-meta">
+                    涨跌 <span class="down">-0.90%</span>
+                    &nbsp;|&nbsp; 成交额 424,118,398
+                    &nbsp;|&nbsp; 最高 437.00 &nbsp;最低 429.50
+                </div>
+                <div class="reasoning"><strong>🎯 持有</strong> <span class="action-badge action-持有 conf-中">中置信度</span><br>技术面：近日围绕420-435元区间震荡，今日跌幅0.90%且成交量放大，显现获利回吐压力，但整体仍处在上升通道中，未破关键支撑。消息面：创业板指走强但个股分化，新能源板块无直接突发新闻，行业长期前景向好，短期建议持有。</div>
+                </div><div class="stock-card">
+                <div class="stock-header">
+                    <span><span class="stock-name">中国平安</span><span class="stock-code">601318.SH</span></span>
+                    <span style="font-size:18px;font-weight:700;" class="down">54.00</span>
+                </div>
+                <div class="stock-meta">
+                    涨跌 <span class="down">-0.15%</span>
+                    &nbsp;|&nbsp; 成交额 42,471,053
+                    &nbsp;|&nbsp; 最高 54.06 &nbsp;最低 53.96
+                </div>
+                <div class="reasoning"><strong>🎯 持有</strong> <span class="action-badge action-持有 conf-中">中置信度</span><br>技术面：过去5日呈现缓步推升走势，今日微跌0.15%属正常整理，成交量略减，短期均线支撑有效。消息面：央行净回笼资金对金融股情绪稍有压制，但保险板块未现利空，估值处于低位，持有待涨。</div>
+                </div><div class="stock-card">
+                <div class="stock-header">
+                    <span><span class="stock-name">美的集团</span><span class="stock-code">000333.SZ</span></span>
+                    <span style="font-size:18px;font-weight:700;" class="down">81.67</span>
+                </div>
+                <div class="stock-meta">
+                    涨跌 <span class="down">-1.13%</span>
+                    &nbsp;|&nbsp; 成交额 55,448,236
+                    &nbsp;|&nbsp; 最高 82.50 &nbsp;最低 81.66
+                </div>
+                <div class="reasoning"><strong>🎯 持有</strong> <span class="action-badge action-持有 conf-中">中置信度</span><br>技术面：此前连续上涨后今日回调1.13%，成交量放大显示部分获利盘离场，但上升趋势尚未逆转，5日均线仍上行。消息面：家电板块缺乏直接刺激，大盘风格高低切换可能影响权重，持有为主，若继续放量下跌需警觉。</div>
+                </div><div class="stock-card">
+                <div class="stock-header">
+                    <span><span class="stock-name">海康威视</span><span class="stock-code">002415.SZ</span></span>
+                    <span style="font-size:18px;font-weight:700;" class="down">30.36</span>
+                </div>
+                <div class="stock-meta">
+                    涨跌 <span class="down">-1.27%</span>
+                    &nbsp;|&nbsp; 成交额 37,232,384
+                    &nbsp;|&nbsp; 最高 30.59 &nbsp;最低 30.34
+                </div>
+                <div class="reasoning"><strong>🎯 观望</strong> <span class="action-badge action-观望 conf-中">中置信度</span><br>技术面：股价短期呈震荡下跌，今日1.27%的跌幅伴随量能放大，空头力量增强，逼近前期低点30.06元支撑。消息面：虽有利好芯片行业的论坛召开，但海康直接关联度低，未形成显著提振，暂宜观望等待企稳信号。</div>
+                </div><div class="stock-card">
+                <div class="stock-header">
+                    <span><span class="stock-name">招商银行</span><span class="stock-code">600036.SH</span></span>
+                    <span style="font-size:18px;font-weight:700;" class="down">38.69</span>
+                </div>
+                <div class="stock-meta">
+                    涨跌 <span class="down">-0.28%</span>
+                    &nbsp;|&nbsp; 成交额 37,144,441
+                    &nbsp;|&nbsp; 最高 38.81 &nbsp;最低 38.68
+                </div>
+                <div class="reasoning"><strong>🎯 持有</strong> <span class="action-badge action-持有 conf-中">中置信度</span><br>技术面：近期沿5日均线稳步上行，今日小幅回调0.28%，成交量温和，上升形态保持完好。消息面：央行净回笼影响偏中性，银行业基本面稳健，高股息提供安全边际，适合持有。</div>
+                </div><div class="stock-card">
+                <div class="stock-header">
+                    <span><span class="stock-name">格力电器</span><span class="stock-code">000651.SZ</span></span>
+                    <span style="font-size:18px;font-weight:700;" class="down">39.50</span>
+                </div>
+                <div class="stock-meta">
+                    涨跌 <span class="down">-0.05%</span>
+                    &nbsp;|&nbsp; 成交额 30,673,037
+                    &nbsp;|&nbsp; 最高 39.52 &nbsp;最低 39.40
+                </div>
+                <div class="reasoning"><strong>🎯 持有</strong> <span class="action-badge action-持有 conf-中">中置信度</span><br>技术面：前期上涨后在39.5元附近横盘整理，今日微跌0.05%，成交量萎缩，多空暂时平衡。消息面：无直接相关新闻，家电需求预期平稳，股息率具备吸引力，持有等待方向选择。</div>
+                </div></div>
+<div class="card"><h2>📰 今日要闻</h2>
+        <ul class="news-list"><li><span class="news-time">*ST闻泰涨停走出8连板，8天累计涨幅达47.72%。</span>*ST闻泰涨停走出8连板<span class="news-source">— 全球快讯</span></li>
+<li><span class="news-time">CPO概念高开，天孚通信涨超9%，股价突破五百元关口，蘅东光涨近10%，亨通光电、罗博特科等跟涨。</span>CPO概念高开 天孚通信股价突破五百元关口<span class="news-source">— 全球快讯</span></li>
+<li><span class="news-time">【三大指数开盘涨跌不一】沪指低开0.17%，深成指高开0.36%，创业板指高开0.82%。光通信、铜链接、光纤等板块指数涨幅居前，贵金属、电力改革、铜箔/覆铜板等板块指数跌幅居前。</span>三大指数开盘涨跌不一<span class="news-source">— 全球快讯</span></li>
+<li><span class="news-time">【第十六届松山湖中国IC创新高峰论坛召开 已推介量产芯片119款】6月3日，第十六届松山湖中国IC创新高峰论坛在东莞松山湖召开。中国半导体行业协会IC设计分会副理事长，芯原股份董事长、首席执行官、总裁戴伟民介绍，论坛每年推介约10款国产芯片，共推介了93家公司，会后上市率达到20.4%，7家上市在进程中。另据统计，论坛累计推介芯片129款，量产芯片119款，总量产率92.2%。</span>第十六届松山湖中国IC创新高峰论坛召开 已推介量产芯片119款<span class="news-source">— 全球快讯</span></li>
+<li><span class="news-time">【元隆雅图：与聚星动力合作开发多款足球队IP衍生产品】元隆雅图在互动平台表示，为迎接2026年世界杯，公司与聚星动力合作开发了多款阿根廷、葡萄牙、法国、西班牙国家足球队IP衍生产品、球星周边产品和足球主题文创产品，包含梅西等球星毛绒盲盒、冰箱贴等产品，目前多款产品已经上市，同时还在持续开发新品并上架销售。</span>元隆雅图：与聚星动力合作开发多款足球队IP衍生产品<span class="news-source">— 全球快讯</span></li>
+<li><span class="news-time">【央行公开市场今日净回笼1776亿元】央行公告，根据公开市场业务一级交易商的需求，2026年6月3日7天期逆回购操作量为零。因今日有1776亿元7天期逆回购到期，实现净回笼1776亿元。</span>央行公开市场今日净回笼1776亿元<span class="news-source">— 全球快讯</span></li>
+<li><span class="news-time">港股开盘，恒生指数低开0.33%，恒生科技指数低开0.7%。联想集团低开7.83%，蔚来-SW低开3.71%。</span>港股开盘：恒生指数低开0.33% 恒生科技指数低开0.7%<span class="news-source">— 全球快讯</span></li>
+<li><span class="news-time">【欧盟或冻结俄罗斯石油价格上限】多家西方媒体披露，欧盟考虑冻结针对俄罗斯石油的限价机制，把价格维持在当下水平，而非按照市场行情调整价格上限，以阻止俄罗斯继续获得国际原油价格飙升的“红利”。</span>欧盟或冻结俄罗斯石油价格上限<span class="news-source">— 全球快讯</span></li>
+</ul></div>
+<div class="card"><h2>🔍 智能筛选</h2>
+        <p style="color:#8c8c8c;font-size:14px;">全市场扫描功能暂不可用（数据源连接不稳定），当前仅分析自选股池。</p></div>
+<div class="disclaimer">
+        ⚠️ <strong>免责声明</strong>：以上分析由 AI 生成，仅供参考，不构成投资建议。<br>
+        投资有风险，入市需谨慎。请结合自身情况做出独立判断。
+        </div>
+<div class="footer">
+        <p>Generated by stock_analyzer &middot; 2026-06-03 &middot; Powered by DeepSeek AI</p>
+        </div></div></body></html>
